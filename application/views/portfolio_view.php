@@ -1,4 +1,3 @@
-
 <div class="container col-10">
 	<div class="row">
 		<h1>Портфолио</h1>
@@ -9,7 +8,7 @@
 
 			foreach($data as $row)
 			{
-				echo '<tr><td>'.$row['Year'].'</td><td>'.$row['Project'].'</td><td>'.$row['Description'].'</td></tr>';
+				echo '<tr><td>'.$row['Year'].'</td><td>'.$row['Site'].'</td><td>'.$row['Description'].'</td></tr>';
 			}
 			
 		?>
@@ -17,3 +16,6 @@
 		</p>
 	</div>
 </div>
+
+
+

@@ -1,19 +1,36 @@
 <?php
+
 class Model
 {
-	public function __construct()
-    {
-        mysqli_set_charset($this->link = new mysqli(
-            $GLOBALS['host'],
-            $GLOBALS['user'],
-            $GLOBALS['password'],
-            $GLOBALS['database']
-        ), 'utf8');
+    var $servername = "localhost";
+    var $username = "root";
+    var $password = "";
+    var $database = "pract_db";
+    public $mysqli;
+
+// Create connection
+
+    function __construct(){
+        $this->mysqli = mysqli_connect($this->servername, $this->username, $this->password, $this->database);
+    
     }
-	public function get_date()
-	{
 
-	}
+    // метод выборки данных
+    public function get_data()
+    {
+        // todo
+    }
+    public function delete($arg)
+    {
+        
+    }
+    public function update($arg){
+        
+    }
+    public function get_page($arg){
+        
+    }
+    public function get_page_comms($arg){
+        
+    }
 }
-
-?>

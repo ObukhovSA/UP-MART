@@ -16,16 +16,40 @@
                     <img src="/images/lodo.png" alt="logo" id="logo">
                 </a>
             </div>
+            <?php
 
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+            }
+            if(isset($_SESSION['user'])){
+                echo 'Добро пожаловать: '.$_SESSION['user'];
+            }
+            ?>
             <div class="col">
-                <a href="#"><h5>Главная</h5></a>
+                <a href="/news"><h6>Новости</h6></a>
             </div>
             <div class="col">
-                <a href="/portfolio"><h5>Портфолио</h5></a>
+                <a href="/portfolio"><h6>Портфолио</h6></a>
             </div>
             <div class="col">
-                <a href="/services"><h5>Контакты</h5></a>
+                <a href="/services"><h6>Контакты</h6></a>
             </div>
+
+            <?php if(!isset($_SESSION['user'])){?>
+            <div class="col">
+                <a href="/login"><h6>Вход</h6></a>
+            </div>
+            <div class="col">
+                <a href="/signup"><h6>Регистрация</h6></a>
+            </div>
+            <?php } ?> <?php if(isset($_SESSION['admin'])){?>
+            <div class="col">
+                <a href="/admin"><h6>Admin Panel</h6></a>
+            </div>
+            <div class="col">
+                <a href="/users"><h6>Пользователи</h6></a>
+            </div>
+            <?php } ?>
         </div>
     </div>
 </header>
