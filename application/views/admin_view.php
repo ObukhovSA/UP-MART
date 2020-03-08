@@ -4,8 +4,12 @@
 
 <h1>Панель администрирования</h1>
 <p>
-Админка...
-<h3>Все записи</h3>
+
+
+<a href ="/users"><h4>Учетные записи пользователей</h4></a>
+
+
+
 <h4>Портфолио</h4>
 <?php
 
@@ -24,7 +28,7 @@
 foreach($data[1] as $row)
 	{
         $record_news_id = $row['id'];
-		echo $row['title']."  <a href='admin/delete/$record_news_id' class='delete_record'>Удалить</a>"."  <a href='admin/news_update/$record_news_id' class='update_record'>Обновить</a>".'<br>';
+		echo $row['title']."  <a href='admin/delete/$record_news_id' class='deletenews_record'>Удалить</a>"."  <a href='/admin/news_update/$record_news_id' class='update_record'>Обновить</a>".'<br>';
 	}
 ?>
 <a href="/admin/add_news" class="add_record">Добавить запись</a>

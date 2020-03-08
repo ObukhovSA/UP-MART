@@ -35,6 +35,20 @@ class Model_Portfolio extends Model
 		}
 		
 	}
+
+	
+	public function deletenews($id){
+		$query = "DELETE FROM news WHERE id=$id";
+		$res = mysqli_query($this->mysqli, $query);
+
+		if ($res) {
+			echo "Record deleted successfully";
+		} else {
+			echo "Error deleting record";
+		}
+		
+	}
+
 	public function update($id){
 		
 	}

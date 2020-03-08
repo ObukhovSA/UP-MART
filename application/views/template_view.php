@@ -34,7 +34,7 @@
             <div class="col">
                 <a href="/services"><h6>Контакты</h6></a>
             </div>
-
+     
             <?php if(!isset($_SESSION['user'])){?>
             <div class="col">
                 <a href="/login"><h6>Вход</h6></a>
@@ -46,9 +46,9 @@
             <div class="col">
                 <a href="/admin"><h6>Admin Panel</h6></a>
             </div>
+            
             <div class="col">
-                <a href="/users"><h6>Пользователи</h6></a>
-            </div>
+                <a href="/logout"><h6>Выход</h6></a>
             <?php } ?>
         </div>
     </div>

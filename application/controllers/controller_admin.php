@@ -93,6 +93,12 @@ class Controller_Admin extends Controller
 		header('Location:/admin');
 
 	}
+
+	function action_deletenews($id){
+		$this->model->deletenews($id);
+		header('Location:/admin');
+
+	}
 	// Действие для разлогинивания администратора
 	function action_logout()
 	{
